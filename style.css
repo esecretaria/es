@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;    
+    min-height: 1000px;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 200px;
+    background: #101010;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    transition: 1s;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+header .logo{
+    visibility: hidden;
+}
+
+header.scrolled{
+    height: 100px;
+}
+
+header.scrolled .logo{
+    position: relative;
+    top: 20px;
+    left: 0;
+    visibility: visible;
+}
+
+header.scrolled .logo img{
+    width: 200px;
+}
+
+nav{
+    position: relative;
+    float: right;
+}
+
+header.scrolled nav ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);    
+}
+
+nav ul{
+    position: relative;
+    margin-top: 0;
+    padding: 40px 0;
+    display: flex;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100px);
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color:  #fff;
+    text-shadow: 0 0 10px #00b3ff,
+             0 0 20px #00b3ff,
+             0 0 30px #00b3ff,
+             0 0 40px #00b3ff,
+             0 0 50px #00b3ff,
+             0 0 60px #00b3ff,
+             0 0 70px #00b3ff,
+             0 0 80px #00b3ff; 
+}
+
+nav ul li a.active{
+    color:  #fff;
+    text-shadow: 0 0 10px #00b3ff,
+             0 0 20px #00b3ff,
+             0 0 40px #00b3ff,
+             0 0 60px #00b3ff,
+             0 0 80px #00b3ff; 
+}
+
+
+section{
+    /*padding: 100px;*/
+    padding: 150px 100px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+section p{
+    font-size: 18px;
+    color: #fff;
+    margin-top: 0;
+    width:  60%;
+}
+
+
+.typed {
+    position: absolute;
+    top: calc(65% - 150px);
+    left: calc(50% - 250px);      
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;       
+}
+
+.typed::after{
+    content: "|";
+    font-size: 150%;
+    line-height: 30px;
+    /*animation: blink .75s step-end infinite;*/
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;       
+}
+
+#typed2 {
+    position: absolute;
+    top: calc(67% - 150px);
+    left: calc(50% - -120px);  
+    color: #fff;
+    line-height: 35px;
+    font-size: 150%;
+    text-align: left;
+    font-family: "Courier New", "Lucida Console", monospace;
+    vertical-align: text-bottom;
+}
+
+header.scrolled .typed{
+    visibility: hidden;
+}
+header.scrolled .typed::after{
+    visibility: hidden;
+}
+header.scrolled #typed2{
+    visibility: hidden;
+}
+
+
+section h1{
+    font-size: 40px;
+    color:  #fff;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff;     
+
+}
+
+hr{
+    border: dotted #fff 6px;
+    border-bottom: none;
+    width: 4%;
+}
+
+.contact{
+/*    position: relative;*/
+    min-height: 100vh;
+/*    padding: 50px 100px;*/
+    display: flex;
+/*    align-items: center;*/
+    flex-direction: column;
+}
+
+.contact .content{
+    /*max-width: 800px;*/
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+    margin: auto;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container .contactInfo{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text{
+/*    display: flex;*/
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+/*    flex-direction: column;*/
+    font-weight: 300;
+    position: relative;
+    bottom: 18px;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: red;
+    margin-bottom: 0;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: green;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;    
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo, .contactForm{
+        width: 100%;
+    }
+    
+}
+
+
+
+footer{
+    /*padding: 100px;*/
+    /*padding: 150px 100px 100px;*/
+    /*box-sizing: border-box;*/
+    display: flex;
+/*    flex-direction: column;
+    min-height: 100vh;*/
+    align-items: center;
+}
+
+/*footer .footericon{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}*/
+.footer-container{
+    margin: auto;
+    color: #fff;
+}
+
+.social-icon {
+  margin: 8px;
+}
